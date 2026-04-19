@@ -1,0 +1,21 @@
+<div class="container">
+
+  <p class="text">{{ displayText }}</p>
+
+  <!-- Buttons appear after typing finishes -->
+  <div class="buttons" *ngIf="showButtons">
+
+    <button class="yes-btn" (click)="onYes()">Yes 🙂</button>
+
+    <!-- NO button that runs away -->
+    <button 
+      class="no-btn"
+      (mouseenter)="moveButton($event)"
+      [ngStyle]="{'transform': 'translate(' + x + 'px,' + y + 'px)'}"
+    >
+      No 😅
+    </button>
+
+  </div>
+
+</div>

@@ -1,0 +1,47 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fce4ec, #e3f2fd);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* GIF styling */
+.gif {
+  width: 180px;
+  margin: 20px 0;
+}
+
+/* Button styling */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff1f4b;
+  transform: scale(1.05);
+}
+
+.gif {
+  width: 180px;
+  margin: 20px 0;
+  animation: shake 0.8s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
