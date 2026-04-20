@@ -1,1 +1,14 @@
+<div class="music-icon" (click)="toggleMusic()">
+  {{ isPlaying ? '🔊' : '🎵' }}
+</div>
+
+<!-- Hidden YouTube player (audio only) -->
+<iframe *ngIf="isPlaying"
+  width="0"
+  height="0"
+  [src]="youtubeUrl"
+  frameborder="0"
+  allow="autoplay">
+</iframe>
+
 <router-outlet></router-outlet>
