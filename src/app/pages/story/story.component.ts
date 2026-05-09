@@ -20,6 +20,8 @@ Would you like to be friends?`;
 
   displayText = '';
   showButtons = false;
+  selectedImage = '';
+  selectedName = '';
 
   x = 0;
   y = 0;
@@ -45,11 +47,15 @@ Would you like to be friends?`;
   }
 
   onYes() {
-    // you can route or show final message
-    alert("Great, Thanks! Nice to meet you 😄");
-  }
+    window.open(
+    'https://www.instagram.com/maitreyagangurde/',
+    '_blank'
+  );
+}
 
   moveButton(event: MouseEvent) {
+
+var showConnections = false;
 
   const button = event.target as HTMLElement;
   const rect = button.getBoundingClientRect();
@@ -94,6 +100,16 @@ Would you like to be friends?`;
 
   //this.x = Math.max(-maxX, Math.min(newX, maxX));
   //this.y = Math.max(-maxY, Math.min(newY, maxY));
+}
+
+openImage(img: string, name: string) {
+  this.selectedImage = img;
+  this.selectedName = name;
+}
+
+closeImage() {
+  this.selectedImage = '';
+  this.selectedName = '';
 }
 
 }

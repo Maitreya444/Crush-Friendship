@@ -2,12 +2,46 @@
 
   <p class="text">{{ displayText }}</p>
 
-  <!-- Buttons appear after typing finishes -->
+  <!-- Mutual friends section -->
+  <div class="connections" *ngIf="showButtons">
+
+    <p class="connection-title">
+      People who might make this less random 😄
+    </p>
+
+    <div class="friends">
+
+      <div class="friend">
+        <img src="assets/images/20260404_160148.jpg" class="friend-pic" (click)="openImage('assets/images/20260404_160148.jpg', 'Me')">
+        <span>Me</span>
+      </div>
+
+      <div class="friend">
+        <img src="assets/images/20250316_155512.jpg" class="friend-pic" (click)="openImage('assets/images/20250316_155512.jpg', 'Neha')">
+        <span>Neha</span>
+      </div>
+
+      <div class="friend">
+        <img src="assets/images/IMG-20260405-WA0239.jpg" class="friend-pic" (click)="openImage('assets/images/IMG-20260405-WA0239.jpg', 'Chineese Arnav')">
+        <span>Chineese Arnav</span>
+      </div>
+
+      <div class="friend">
+        <img src="assets/images/20250503_151821.jpg" class="friend-pic" (click)="openImage('assets/images/20250503_151821.jpg', 'Sakshi')">
+        <span>Sakshi</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Buttons -->
   <div class="buttons" *ngIf="showButtons">
 
-    <button class="yes-btn" (click)="onYes()">Yes 🙂</button>
+    <button class="yes-btn" (click)="onYes()">
+      Yes 🙂
+    </button>
 
-    <!-- NO button that runs away -->
     <button 
       class="no-btn"
       (mouseenter)="moveButton($event)"
@@ -15,6 +49,22 @@
     >
       No 😅
     </button>
+
+  </div>
+
+</div>
+
+<div
+  class="image-popup"
+  *ngIf="selectedImage"
+  (click)="closeImage()"
+>
+
+  <div class="popup-content">
+
+    <img [src]="selectedImage">
+
+    <p>{{ selectedName }}</p>
 
   </div>
 

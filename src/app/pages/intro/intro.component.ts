@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./intro.component.css']
 })
 export class IntroComponent {
-  name = 'Nitika!!';
+  //name = 'Nitika!!';
   text = '';
-  fullText = "I made something for you...";
+  fullText = "I made something for you and this isn't a virus I promise 🤣...";
 
   ngOnInit() 
   {

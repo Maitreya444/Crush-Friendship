@@ -8,6 +8,7 @@ import { HelloComponent } from './pages/hello/hello.component';
 import { YesFlowersComponent } from './pages/yes-flowers/yes-flowers.component';
 import { NoFlowersComponent } from './pages/no-flowers/no-flowers.component';
 import { StoryComponent } from './pages/story/story.component';
+import { VideoIntroComponent } from './pages/video-intro/video-intro.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StoryComponent } from './pages/story/story.component';
     HelloComponent,
     YesFlowersComponent,
     NoFlowersComponent,
-    StoryComponent
+    StoryComponent,
+    VideoIntroComponent
   ],
   imports: [
     BrowserModule,

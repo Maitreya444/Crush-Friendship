@@ -1,0 +1,30 @@
+<div class="video-container">
+
+  <!-- Countdown -->
+  <div *ngIf="showCountdown" class="countdown">
+    {{ countdown }}
+  </div>
+
+  <!-- Show video ONLY after countdown -->
+  <video
+    *ngIf="!showCountdown"
+    #introVideo
+    autoplay
+    playsinline
+    controls
+  >
+    <source
+      src="assets/videos/Gsme.mp4"
+      type="video/mp4"
+    >
+  </video>
+
+  <!-- Next button -->
+  <button
+    class="next-btn"
+    (click)="goToNextPage()"
+  >
+    Next ➡️
+  </button>
+
+</div>
